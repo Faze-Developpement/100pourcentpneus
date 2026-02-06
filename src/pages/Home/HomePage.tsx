@@ -76,7 +76,7 @@ export default function HomePage() {
             <article className="service-card">
               <div className="service-icon">01</div>
               <h3>Pneumatiques</h3>
-              <p>Montage industriel, équilibrage dynamique et géométrie laser.</p>
+              <p>Montage industriel, parallélisme et géométrie laser.</p>
             </article>
             <article className="service-card">
               <div className="service-icon">02</div>

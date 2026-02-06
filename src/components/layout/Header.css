@@ -89,7 +89,7 @@
   color: var(--header-link);
   font-weight: 600;
   padding: 8px 12px;
-  border-radius: 999px;
+  border-radius: 10px;
   transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
@@ -100,7 +100,7 @@
 }
 
 .contact-btn {
-  background: linear-gradient(180deg, #d65f10, #b84f0a);
+  background: linear-gradient(120deg, #d65f10, #b84f0a);
   color: #fff;
   font-weight: 700;
   border: 1px solid rgba(255,255,255,0.08);
@@ -108,8 +108,8 @@
 }
 
 .contact-btn:hover {
-  background: linear-gradient(180deg, #e56a14, #c6540c);
-  color: #ffffff;            /* force le texte blanc */
+  background: linear-gradient(120deg, #e56a14, #c6540c);
+  color: #ffffff;
   transform: translateY(-1px);
 }
 
