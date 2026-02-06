@@ -8,7 +8,7 @@ export default function NotFoundPage() {
         <p className="eyebrow">404</p>
         <h1 className="section-title">Page introuvable</h1>
         <p className="section-lead">
-          La page demandee n'existe pas ou a ete deplacee.
+          La page demandée n'existe pas ou a été déplacée.
         </p>
         <Link to="/" className="btn btn-primary">Retour accueil</Link>
       </div>

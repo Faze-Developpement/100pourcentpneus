@@ -6,14 +6,14 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <h3>100% Pneu 100% Pare-Brise</h3>
+          <h3>100% Pneus 100% Pare-Brise</h3>
           <p>
-            Garage specialise pneus, pare-brise et intervention mobile.
-            Devis rapide, pieces certifiees, service premium.
+            Garage spécialisé pneus, pare-brise et intervention mobile.
+            Devis rapide, pièces certifiées, service premium.
           </p>
           <div className="footer-badges">
-            <span>Assurances partenaires</span>
-            <span>Atelier & mobile</span>
+            <span>Fournisseurs partenaires</span>
+            <span>Atelier & Location</span>
           </div>
         </div>
         <div className="footer-links">
@@ -24,14 +24,14 @@ export default function Footer() {
         </div>
         <div className="footer-contact">
           <h4>Contact</h4>
-          <a href="tel:+33612345678">06 12 34 56 78</a>
+          <a href="tel:+33987586865">09 87 58 68 65</a>
           <a href="mailto:contact@100pourcentpneus.fr">contact@100pourcentpneus.fr</a>
-          <span>Elbeuf, 76500</span>
+          <span>60 Cours Carnot, Elbeuf 76500</span>
         </div>
       </div>
       <div className="footer-bottom">
-        <span>(c) 2026 100% Pneu. Tous droits reserves.</span>
-        <span>Ouvert lun-sam | 8h-19h</span>
+        <span>© 2026 100% Pneus 100% Pare-brise. Tous droits réservés.</span>
+        <span>Ouvert lun–sam | 8 h – 19 h</span>
       </div>
     </footer>
   )

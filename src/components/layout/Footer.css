@@ -1,6 +1,12 @@
 .footer {
-  background: var(--surface);
+  position: relative;
+  z-index: 5;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(10, 10, 10, 0.75) 100%
+  );
   padding-top: 48px;
 }
 

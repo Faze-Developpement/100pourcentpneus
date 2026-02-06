@@ -1,54 +1,66 @@
 import { Link } from "react-router-dom"
+import backgroundVideo from "../../assets/background.mp4"
 import "./Home.css"
 
 export default function HomePage() {
   return (
     <main className="home">
+      <div className="home-video" aria-hidden="true">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hero-video"
+        >
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+      </div>
       <section className="hero-section">
         <div className="container hero-grid">
           <div className="hero-content">
-            <span className="tag">Garage specialisé pneus | pare-brise</span>
-            <h1 className="hero-title">Votre garage pour rouler serein.</h1>
+            <span className="tag">Expertise Technique Pneus & Vitrage</span>
+            <h1 className="hero-title">Maintenance & Location<br />automobile.</h1>
             <p className="hero-text">
-              Diagnostic rapide, pieces certifiees et intervention mobile.
-              Nous gerons vos pneus, vitrages et capteurs ADAS en un seul passage.
+              Interventions de précision sur pneumatiques, vitrages et systèmes ADAS. 
+              Équipement industriel pour une sécurité sans compromis.
             </p>
             <div className="hero-actions">
-              <Link to="/contact" className="btn btn-primary">Prendre rendez-vous</Link>
-              <a className="btn btn-outline" href="tel:+33612345678">06 12 34 56 78</a>
+              <Link to="/contact" className="btn btn-primary">Prendre RDV</Link>
+              <a className="btn btn-outline" href="tel:+339875865">09 87 58 68 65</a>
             </div>
             <div className="hero-pills">
-              <span className="pill">Devis clair en 10 min</span>
-              <span className="pill">Atelier + mobile</span>
-              <span className="pill">Assurances partenaires</span>
+              <span className="pill">Réparation automobile</span>
+              <span className="pill">Location</span>
+              <span className="pill">Fournisseurs partenaires</span>
             </div>
           </div>
           <div className="hero-panel">
             <div className="hero-card">
-              <h3>Intervention rapide</h3>
+              <h3>Disponibilité</h3>
               <p>
-                Atelier equipe, equipee mobile et suivi photo avant/apres pour
-                garantir un service propre et pro.
+                Protocoles rigoureux et suivi technique systématique. 
+                Résultats garantis conformes constructeurs.
               </p>
               <div className="hero-stats">
                 <div className="stat">
-                  <strong>24/48h</strong>
-                  <span>Delai moyen</span>
+                  <strong>24H</strong>
+                  <span>Réactivité</span>
                 </div>
                 <div className="stat">
-                  <strong>+1200</strong>
-                  <span>Clients servis</span>
+                  <strong>1200</strong>
+                  <span>Véhicules</span>
                 </div>
                 <div className="stat">
                   <strong>100%</strong>
-                  <span>Satisfactions</span>
+                  <span>Conformité</span>
                 </div>
               </div>
             </div>
             <div className="hero-strip">
-              <div>Pneus tourisme | 4x4 | utilitaires</div>
-              <div>Pare-brise | vitres laterales | lunette</div>
-              <div>Calibrage ADAS</div>
+              <div>• PNEUS : TOURISME | 4X4 | UTILITAIRES</div>
+              <div>• VITRAGE : PARE-BRISE | LATÉRAL | LUNETTE</div>
+              <div>• TECHNIQUE : CALIBRAGE ADAS</div>
             </div>
           </div>
         </div>
@@ -57,34 +69,29 @@ export default function HomePage() {
       <section className="section services-section">
         <div className="container">
           <div className="section-header">
-            <div>
-              <p className="eyebrow">Nos services</p>
-              <h2 className="section-title">Tout pour la securité de votre vehicule</h2>
-              <p className="section-lead">
-                Une equipe polyvalente, des pièces haut de gamme et des conseils clairs.
-              </p>
-            </div>
+            <p className="eyebrow">Unités de service</p>
+            <h2 className="section-title">Prestations Techniques</h2>
           </div>
           <div className="card-grid">
-            <article className="card service-card">
+            <article className="service-card">
               <div className="service-icon">01</div>
-              <h3>Pneus toutes marques</h3>
-              <p>Montage, équilibrage, géometrie et stockage saisonnier.</p>
+              <h3>Pneumatiques</h3>
+              <p>Montage industriel, équilibrage dynamique et géométrie laser.</p>
             </article>
-            <article className="card service-card">
+            <article className="service-card">
               <div className="service-icon">02</div>
-              <h3>Pare-brise & vitrage</h3>
-              <p>Réparation impact, remplacement complet, joints et essuie-glaces.</p>
+              <h3>Vitrages</h3>
+              <p>Remplacement certifié et réparation d'impacts résine haute pression.</p>
             </article>
-            <article className="card service-card">
+            <article className="service-card">
               <div className="service-icon">03</div>
-              <h3>Calibrage ADAS</h3>
-              <p>Remise a niveau des capteurs après remplacement vitrage.</p>
+              <h3>Systèmes ADAS</h3>
+              <p>Recalibrage des caméras et capteurs après changement de vitrage.</p>
             </article>
-            <article className="card service-card">
+            <article className="service-card">
               <div className="service-icon">04</div>
-              <h3>Atelier mobile</h3>
-              <p>Intervention sur place pour particuliers et flottes.</p>
+              <h3>Logistique Mobile</h3>
+              <p>Déploiement technique sur site pour flottes et particuliers.</p>
             </article>
           </div>
         </div>
@@ -93,28 +100,28 @@ export default function HomePage() {
       <section className="section trust-section">
         <div className="container trust-grid">
           <div className="trust-content">
-            <p className="eyebrow">Pourquoi nous</p>
-            <h2 className="section-title">Un garage qui respecte vos delais.</h2>
+            <p className="eyebrow">Standards de qualité</p>
+            <h2 className="section-title">Rigueur Opérationnelle</h2>
             <p className="section-lead">
-              Diagnostic avant intervention, choix transparent et suivi client.
+              Sélection stricte des composants et transparence tarifaire totale.
             </p>
             <ul className="trust-list">
-              <li>Pieces certifiées et garanties.</li>
-              <li>Prise en charge assurance simplifiée.</li>
-              <li>Vehicule propre et controle final.</li>
-              <li>Disponibilite rapide même en urgence.</li>
+              <li>Composants certifiés origine constructeur.</li>
+              <li>Gestion administrative directe avec assurances.</li>
+              <li>Double contrôle qualité post-intervention.</li>
+              <li>Traçabilité complète des prestations.</li>
             </ul>
           </div>
           <div className="trust-cards">
-            <div className="card trust-card">
-              <h3>Service entreprise</h3>
-              <p>Gestion flotte, contrats entretien</p>
-              <Link to="/contact" className="btn btn-outline">Demander un devis</Link>
+            <div className="trust-card">
+              <h3>Gestion Flotte</h3>
+              <p>Contrats de maintenance préventive pour entreprises.</p>
+              <Link to="/contact" className="btn btn-outline">Espace Pro</Link>
             </div>
-            <div className="card trust-card alt">
-              <h3>Service particulier</h3>
-              <p>Tarifs adaptes, paiement et conseil personnalise.</p>
-              <Link to="/contact" className="btn btn-primary">Voir les offres</Link>
+            <div className="trust-card alt">
+              <h3>Service Particulier</h3>
+              <p>Barèmes fixes et diagnostic technique immédiat.</p>
+              <Link to="/contact" className="btn btn-primary">Prendre RDV</Link>
             </div>
           </div>
         </div>
@@ -123,46 +130,44 @@ export default function HomePage() {
       <section className="section process-section">
         <div className="container">
           <div className="section-header">
-            <div>
-              <p className="eyebrow">Process</p>
-              <h2 className="section-title">Simple, rapide, efficace</h2>
-            </div>
+            <p className="eyebrow">Protocole</p>
+            <h2 className="section-title">Flux d'intervention</h2>
           </div>
           <div className="process-grid">
-            <div className="card process-card">
-              <span className="step">1</span>
-              <h3>Prise de contact</h3>
-              <p>Telephone ou formulaire, on confirme le besoin.</p>
+            <div className="process-card">
+              <span className="step">01</span>
+              <h3>Diagnostic</h3>
+              <p>Analyse du besoin et validation technique.</p>
             </div>
-            <div className="card process-card">
-              <span className="step">2</span>
-              <h3>Devis clair</h3>
-              <p>Prix annonce avant intervention, sans surprise.</p>
+            <div className="process-card">
+              <span className="step">02</span>
+              <h3>Chiffrage</h3>
+              <p>Établissement du devis ferme sans frais cachés.</p>
             </div>
-            <div className="card process-card">
-              <span className="step">3</span>
-              <h3>Intervention</h3>
-              <p>Atelier ou mobile, execution rapide et soignee.</p>
+            <div className="process-card">
+              <span className="step">03</span>
+              <h3>Exécution</h3>
+              <p>Réalisation selon normes de sécurité strictes.</p>
             </div>
-            <div className="card process-card">
-              <span className="step">4</span>
-              <h3>Controle final</h3>
-              <p>Verification et conseils pour prolonger la duree.</p>
+            <div className="process-card">
+              <span className="step">04</span>
+              <h3>Validation</h3>
+              <p>Contrôle de sortie et remise du rapport.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section cta-section">
+      <section className="section">
         <div className="container cta-card">
           <div>
-            <p className="eyebrow">Besoin d'un rendez-vous ?</p>
-            <h2 className="section-title">On planifie votre passage aujourd'hui</h2>
-            <p className="section-lead">Reponse rapide, prise en charge directe.</p>
+            <p className="eyebrow">Urgence ou Planification</p>
+            <h2 className="section-title">Mise en relation technique</h2>
+            <p className="section-lead">Intervention sous 24h à 48h selon stock.</p>
           </div>
           <div className="cta-actions">
-            <Link to="/contact" className="btn btn-primary">Contact</Link>
-            <a className="btn btn-ghost" href="tel:+33612345678">Appeler</a>
+            <Link to="/contact" className="btn btn-ghost">Formulaire</Link>
+            <a className="btn btn-primary" href="tel:+33612345678">Appel Direct</a>
           </div>
         </div>
       </section>
