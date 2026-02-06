@@ -1,0 +1,16 @@
+.notfound {
+  display: grid;
+  place-items: center;
+  min-height: 70vh;
+}
+
+.notfound-card {
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 16px;
+}

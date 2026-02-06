@@ -1,0 +1,58 @@
+.contact-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-hero {
+  padding-bottom: 40px;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
+}
+
+.contact-info {
+  display: grid;
+  gap: 18px;
+}
+
+.info-card {
+  padding: 22px;
+}
+
+.info-card h3 {
+  margin-top: 0;
+  font-family: var(--font-display);
+}
+
+.info-card p {
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+.contact-form {
+  padding: 26px;
+  display: grid;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: 13px;
+}

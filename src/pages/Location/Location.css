@@ -1,0 +1,69 @@
+.location-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-hero {
+  padding-bottom: 40px;
+}
+
+.location-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.map-card {
+  padding: 22px;
+  display: grid;
+  gap: 18px;
+}
+
+.map-placeholder {
+  background: linear-gradient(135deg, rgba(255, 122, 26, 0.2), rgba(20, 20, 24, 0.9));
+  border-radius: 16px;
+  height: 240px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+}
+
+.map-details h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+}
+
+.map-details p {
+  margin: 4px 0;
+  color: var(--muted);
+}
+
+.location-info {
+  padding: 22px;
+  display: grid;
+  gap: 16px;
+}
+
+.location-info h3 {
+  margin: 0;
+  font-family: var(--font-display);
+}
+
+.location-info ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.location-hours h4 {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+}
+
+.location-hours p {
+  margin: 4px 0;
+  color: var(--muted);
+}

@@ -1,0 +1,113 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+  background: linear-gradient(120deg, #0b0b0d 0%, #111216 50%, #1a1210 100%);
+  border-bottom: 1px solid rgba(255, 122, 26, 0.35);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 122, 26, 0.9), transparent);
+  opacity: 0.6;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 128px;
+  height: 85px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.5));
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.brand-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 999px;
+  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+  background: rgba(255, 122, 26, 0.14);
+  transform: translateY(-1px);
+}
+
+.contact-btn {
+  background: var(--accent);
+  color: #101010;
+  font-weight: 700;
+  box-shadow: 0 10px 10px rgba(255, 122, 26, 0.3);
+}
+
+.contact-btn:hover {
+  background: #ff8f3d;
+  color: #101010;
+}
+
+@media (max-width: 760px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand-subtitle {
+    letter-spacing: 0.16em;
+  }
+}
