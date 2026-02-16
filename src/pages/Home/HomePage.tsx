@@ -22,7 +22,7 @@ export default function HomePage() {
             <span className="tag">Expertise Technique Pneus & Vitrage</span>
             <h1 className="hero-title">Maintenance & Location<br />automobile.</h1>
             <p className="hero-text">
-              Interventions de précision sur pneumatiques, vitrages et systèmes ADAS. 
+              Interventions de précision sur pneumatiques, vitrages et location. 
               Équipement industriel pour une sécurité sans compromis.
             </p>
             <div className="hero-actions">
@@ -37,30 +37,32 @@ export default function HomePage() {
           </div>
           <div className="hero-panel">
             <div className="hero-card">
-              <h3>Disponibilité</h3>
-              <p>
-                Protocoles rigoureux et suivi technique systématique. 
-                Résultats garantis conformes constructeurs.
+              <h1>
+                Pneus, vitrage et location<br />
+                <span className="highlight">service rapide et local</span>
+              </h1>
+
+              <p className="hero-lead">
+                Intervention sur rendez-vous ou en urgence.
+                Véhicules particuliers, utilitaires et 4x4.
               </p>
-              <div className="hero-stats">
-                <div className="stat">
-                  <strong>24H</strong>
-                  <span>Réactivité</span>
-                </div>
-                <div className="stat">
-                  <strong>1200</strong>
-                  <span>Véhicules</span>
-                </div>
-                <div className="stat">
-                  <strong>100%</strong>
-                  <span>Conformité</span>
-                </div>
+
+              <ul className="hero-list">
+                <li>Changement et réparation de pneus</li>
+                <li>Remplacement pare-brise et vitrages</li>
+                <li>Véhicules de location disponibles</li>
+              </ul>
+
+              <div className="hero-actions">
+                <a href="/contact" className="btn btn-primary">Prendre rendez-vous</a>
+                <a href="tel:01XXXXXXXX" className="btn btn-outline">Appeler</a>
               </div>
             </div>
+
             <div className="hero-strip">
-              <div>• PNEUS : TOURISME | 4X4 | UTILITAIRES</div>
-              <div>• VITRAGE : PARE-BRISE | LATÉRAL | LUNETTE</div>
-              <div>• TECHNIQUE : CALIBRAGE ADAS</div>
+              <div>PNEUS • TOURISME • 4X4 • UTILITAIRES</div>
+              <div>VITRAGE • PARE-BRISE • LATÉRAL • LUNETTE</div>
+              <div>LOCATION DE VÉHICULES</div>
             </div>
           </div>
         </div>
@@ -69,8 +71,7 @@ export default function HomePage() {
       <section className="section services-section">
         <div className="container">
           <div className="section-header">
-            <p className="eyebrow">Unités de service</p>
-            <h2 className="section-title">Prestations Techniques</h2>
+            <h2 className="section-title">Prestations</h2>
           </div>
           <div className="card-grid">
             <article className="service-card">
@@ -85,8 +86,8 @@ export default function HomePage() {
             </article>
             <article className="service-card">
               <div className="service-icon">03</div>
-              <h3>Systèmes ADAS</h3>
-              <p>Recalibrage des caméras et capteurs après changement de vitrage.</p>
+              <h3>Location</h3>
+              <p>Location de véhicule citadin, sportives & autre selon stock.</p>
             </article>
             <article className="service-card">
               <div className="service-icon">04</div>
@@ -97,77 +98,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section trust-section">
-        <div className="container trust-grid">
-          <div className="trust-content">
-            <p className="eyebrow">Standards de qualité</p>
-            <h2 className="section-title">Rigueur Opérationnelle</h2>
-            <p className="section-lead">
-              Sélection stricte des composants et transparence tarifaire totale.
-            </p>
-            <ul className="trust-list">
-              <li>Composants certifiés origine constructeur.</li>
-              <li>Gestion administrative directe avec assurances.</li>
-              <li>Double contrôle qualité post-intervention.</li>
-              <li>Traçabilité complète des prestations.</li>
-            </ul>
-          </div>
-          <div className="trust-cards">
-            <div className="trust-card">
-              <h3>Gestion Flotte</h3>
-              <p>Contrats de maintenance préventive pour entreprises.</p>
-              <Link to="/contact" className="btn btn-outline">Espace Pro</Link>
-            </div>
-            <div className="trust-card alt">
-              <h3>Service Particulier</h3>
-              <p>Barèmes fixes et diagnostic technique immédiat.</p>
-              <Link to="/contact" className="btn btn-primary">Prendre RDV</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section process-section">
-        <div className="container">
-          <div className="section-header">
-            <p className="eyebrow">Protocole</p>
-            <h2 className="section-title">Flux d'intervention</h2>
-          </div>
-          <div className="process-grid">
-            <div className="process-card">
-              <span className="step">01</span>
-              <h3>Diagnostic</h3>
-              <p>Analyse du besoin et validation technique.</p>
-            </div>
-            <div className="process-card">
-              <span className="step">02</span>
-              <h3>Chiffrage</h3>
-              <p>Établissement du devis ferme sans frais cachés.</p>
-            </div>
-            <div className="process-card">
-              <span className="step">03</span>
-              <h3>Exécution</h3>
-              <p>Réalisation selon normes de sécurité strictes.</p>
-            </div>
-            <div className="process-card">
-              <span className="step">04</span>
-              <h3>Validation</h3>
-              <p>Contrôle de sortie et remise du rapport.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="section">
-        <div className="container cta-card">
-          <div>
-            <p className="eyebrow">Urgence ou Planification</p>
-            <h2 className="section-title">Mise en relation technique</h2>
-            <p className="section-lead">Intervention sous 24h à 48h selon stock.</p>
-          </div>
-          <div className="cta-actions">
-            <Link to="/contact" className="btn btn-ghost">Formulaire</Link>
-            <a className="btn btn-primary" href="tel:+33612345678">Appel Direct</a>
+        <div className="container">
+          <div className="cta-card">
+            <div className="cta-content">
+              <h2 className="section-title">Où sommes-nous ?</h2>
+              <p className="section-lead">
+                60 Cours Carnot, 76500 Elbeuf, France
+              </p>
+            </div>
+
+            <div className="cta-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7477.519444404036!2d1.0104611296782124!3d49.2889533879252!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e11fef9cb3dced%3A0xb7372a9c8a7c2fa!2s100%25%20PNEUS%20100%25%20PARE-BRISE!5e1!3m2!1sfr!2sus!4v1770491407720!5m2!1sfr!2sus"
+                width="800"
+                height="600"
+                loading="lazy">
+              </iframe>
+            </div>
           </div>
         </div>
       </section>
