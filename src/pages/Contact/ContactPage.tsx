@@ -1,14 +1,21 @@
+import backgroundVideo from "../../assets/background.mp4"
 import "./Contact.css"
 
 export default function ContactPage() {
   return (
     <main className="contact-page">
+      <div className="contact-video" aria-hidden="true">
+        <video autoPlay loop muted playsInline>
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+      </div>
+
       <section className="section contact-hero">
         <div className="container">
           <p className="eyebrow">Contact</p>
           <h1 className="section-title">Premier contact</h1>
           <p className="section-lead">
-            Un membre de note équipe vous répond rapidement avec des solutions adaptées à votre besoin.
+            Un membre de notre équipe vous répond rapidement avec des solutions adaptées à votre besoin.
           </p>
         </div>
       </section>
