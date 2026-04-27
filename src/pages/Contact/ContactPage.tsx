@@ -1,82 +1,64 @@
-import backgroundVideo from "../../assets/background.mp4"
+import { useState } from "react"
 import "./Contact.css"
 
 export default function ContactPage() {
+  const [sent, setSent] = useState(false)
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault(); setSent(true)
+  }
+
   return (
-    <main className="contact-page">
-      <div className="contact-video" aria-hidden="true">
-        <video autoPlay loop muted playsInline>
-          <source src={backgroundVideo} type="video/mp4" />
-        </video>
-      </div>
-
-      <section className="section contact-hero">
+    <>
+      <section className="page-hero">
         <div className="container">
-          <p className="eyebrow">Contact</p>
-          <h1 className="section-title">Premier contact</h1>
-          <p className="section-lead">
-            Un membre de notre équipe vous répond rapidement avec des solutions adaptées à votre besoin.
-          </p>
+          <p className="eyebrow">On est là</p>
+          <h1 className="section-title">Contact</h1>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container contact-grid">
-          <div className="contact-info">
-            <div className="card info-card">
-              <h3>Coordonnées</h3>
-              <p>09 87 58 68 65</p>
-              <p>contact@100pourcentpneus.fr</p>
-              <p>60 Cours Carnot, Elbeuf 76500</p>
-            </div>
-            <div className="card info-card">
-              <h3>Horaires</h3>
-              <p>Lun – Sam : 8 h 00 – 19 h 00</p>
-              <p>Dimanche : fermé</p>
-            </div>
-            <div className="card info-card">
-              <h3>Services rapides</h3>
-              <p>Pneus, Pare-brise, Location & Autre</p>
-            </div>
-          </div>
-
-          <form className="card contact-form">
-            <div className="form-row">
-              <div>
-                <label htmlFor="name">Nom complet</label>
-                <input id="name" name="name" placeholder="Nom et prénom" />
-              </div>
-              <div>
-                <label htmlFor="phone">Téléphone</label>
-                <input id="phone" name="phone" placeholder="06 12 34 56 78" />
-              </div>
-            </div>
-            <div className="form-row">
-              <div>
-                <label htmlFor="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="email@email.fr" />
-              </div>
-              <div>
-                <label htmlFor="service">Service</label>
-                <select id="service" name="service">
-                  <option>Pneus</option>
-                  <option>Pare-brise</option>
-                  <option>Location</option>
-                  <option>Autre</option>
-                </select>
-              </div>
-            </div>
+      <section className="section contact-section">
+        <div className="container">
+          <div className="contact-grid">
             <div>
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" rows={9} placeholder="Expliquez votre besoin"></textarea>
+              {sent ? (
+                <div className="rdv-success">
+                  <span className="rdv-success-icon">✓</span>
+                  <h2 className="rdv-success-title">Message envoyé</h2>
+                  <p>Nous vous répondrons rapidement.</p>
+                </div>
+              ) : (
+                <form className="rdv-form" onSubmit={handleSubmit} noValidate>
+                  <div className="form-row">
+                    <div className="form-group"><label htmlFor="prenom">Prénom</label><input id="prenom" type="text" placeholder="Jean" required /></div>
+                    <div className="form-group"><label htmlFor="nom">Nom</label><input id="nom" type="text" placeholder="Dupont" required /></div>
+                  </div>
+                  <div className="form-group"><label htmlFor="email">Email</label><input id="email" type="email" placeholder="jean@email.fr" required /></div>
+                  <div className="form-group"><label htmlFor="msg">Message</label><textarea id="msg" rows={5} placeholder="Votre message…" required /></div>
+                  <button type="submit" className="btn btn-primary">Envoyer</button>
+                </form>
+              )}
             </div>
-            <div className="form-actions">
-              <button className="btn btn-primary" type="submit">Envoyer la demande</button>
-              <span className="form-note">Retour sous 24–48 h ouvrables</span>
-            </div>
-          </form>
+            <aside className="rdv-aside">
+              <div className="rdv-info card">
+                <h3 className="rdv-info-title">Nous trouver</h3>
+                <div className="rdv-info-block">
+                  <span className="rdv-info-label">Téléphone</span>
+                  <div className="rdv-info-val"><a href="tel:+33XXXXXXXXX">02 XX XX XX XX</a></div>
+                </div>
+                <div className="rdv-info-block">
+                  <span className="rdv-info-label">Adresse</span>
+                  <address className="rdv-info-val">XX rue XXXX<br />XXXXX Caen</address>
+                </div>
+                <div className="rdv-info-block">
+                  <span className="rdv-info-label">Horaires</span>
+                  <div className="rdv-info-val"><span>Lun–Ven · 8h–18h</span><span>Sam · 9h–17h</span></div>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
-    </main>
+    </>
   )
 }

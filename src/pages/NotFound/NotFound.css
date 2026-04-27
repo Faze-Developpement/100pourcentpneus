@@ -1,16 +1,4 @@
-.notfound {
-  display: grid;
-  place-items: center;
-  min-height: 70vh;
-}
-
-.notfound-card {
-  text-align: center;
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: var(--shadow);
-  display: grid;
-  gap: 16px;
-}
+.notfound { flex: 1; display: flex; align-items: center; background: var(--bg); }
+.notfound .container { padding: 96px 0; display: flex; flex-direction: column; gap: 16px; }
+.notfound-code { font-family: var(--font-display); font-size: 120px; font-weight: 700; color: var(--line); line-height: 1; display: block; }
+.notfound-title { font-family: var(--font-display); font-size: 36px; font-weight: 700; text-transform: uppercase; color: var(--text); margin: 0 0 8px; }

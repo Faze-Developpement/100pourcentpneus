@@ -1,42 +1,39 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import logo from "../../assets/logo.png"
 import "./Header.css"
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false)
-
-  const close = () => setMenuOpen(false)
+  const [open, setOpen] = useState(false)
+  const close = () => setOpen(false)
 
   return (
     <header className="header">
-      <div className="header-container">
-        <Link to="/" className="logo-section" onClick={close}>
-          <img src={logo} alt="100% Pneus" className="logo-img" />
-          <div className="brand-text">
-            <span className="brand-name">
-              100% <span className="highlight">Pneus</span> | 100% Pare-Brise
-            </span>
-            <span className="brand-subtitle">Votre spécialiste pneumatique et vitrage</span>
-          </div>
+      <div className="header-inner container">
+        <Link to="/" className="brand" onClick={close}>
+          <img src={logo} alt="100% Pneus" className="brand-logo" />
         </Link>
 
         <button
-          className={`hamburger${menuOpen ? " open" : ""}`}
-          onClick={() => setMenuOpen(o => !o)}
-          aria-label="Ouvrir le menu"
-          aria-expanded={menuOpen}
+          className={`nav-toggle${open ? " open" : ""}`}
+          onClick={() => setOpen(o => !o)}
+          aria-label="Menu"
+          aria-expanded={open}
         >
-          <span />
-          <span />
-          <span />
+          <span /><span /><span />
         </button>
 
-        <nav className={`nav-menu${menuOpen ? " nav-open" : ""}`}>
-          <Link to="/" className="nav-link" onClick={close}>Accueil</Link>
-          <Link to="/location" className="nav-link" onClick={close}>Location</Link>
-          <Link to="/contact" className="nav-link contact-btn" onClick={close}>Contact</Link>
+        <nav className={`nav${open ? " nav-open" : ""}`}>
+          <NavLink to="/" end className={({ isActive }) => `nav-link${isActive ? " active" : ""}`} onClick={close}>Accueil</NavLink>
+          <NavLink to="/services" className={({ isActive }) => `nav-link${isActive ? " active" : ""}`} onClick={close}>Services</NavLink>
+          <NavLink to="/vehicules" className={({ isActive }) => `nav-link${isActive ? " active" : ""}`} onClick={close}>Location</NavLink>
+          <NavLink to="/rendez-vous" className={({ isActive }) => `nav-link nav-link-cta${isActive ? " active" : ""}`} onClick={close}>Prendre RDV</NavLink>
         </nav>
+
+        <a href="tel:+33XXXXXXXXX" className="header-tel">
+          <span className="header-tel-label">Appeler</span>
+          <span className="header-tel-num">02 XX XX XX XX</span>
+        </a>
       </div>
     </header>
   )

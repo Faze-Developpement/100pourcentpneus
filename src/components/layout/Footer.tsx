@@ -1,37 +1,50 @@
 import { Link } from "react-router-dom"
+import logo from "../../assets/logo.png"
 import "./Footer.css"
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="container footer-grid">
+      <div className="footer-inner container">
         <div className="footer-brand">
-          <h3>100% Pneus 100% Pare-Brise</h3>
-          <p>
-            Garage spécialisé pneus, pare-brise et intervention mobile.
-            Devis rapide, pièces certifiées, service premium.
-          </p>
-          <div className="footer-badges">
-            <span>Fournisseurs partenaires</span>
-            <span>Atelier & Location</span>
+          <img src={logo} alt="100% Pneus" className="footer-logo" />
+          <p className="footer-tagline">Pneus · Pare-brise · Location sportive</p>
+        </div>
+
+        <nav className="footer-nav">
+          <span className="footer-col-title">Navigation</span>
+          <Link to="/">Accueil</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/vehicules">Location</Link>
+          <Link to="/rendez-vous">Prendre RDV</Link>
+          <Link to="/contact">Contact</Link>
+        </nav>
+
+        <div className="footer-services">
+          <span className="footer-col-title">Nos services</span>
+          <span>Pneus toutes marques</span>
+          <span>Remplacement pare-brise</span>
+          <span>Lavage professionnel</span>
+          <span>Pièces détachées</span>
+          <span>Démarches administratives</span>
+        </div>
+
+        <div className="footer-contact">
+          <span className="footer-col-title">Contact</span>
+          <a href="tel:+33XXXXXXXXX">02 XX XX XX XX</a>
+          <address>XX rue XXXX<br />XXXXX Caen</address>
+          <div className="footer-hours">
+            <span>Lun–Ven · 8h–18h</span>
+            <span>Sam · 9h–17h</span>
           </div>
         </div>
-        <div className="footer-links">
-          <h4>Navigation</h4>
-          <Link to="/">Accueil</Link>
-          <Link to="/location">Location</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-        <div className="footer-contact">
-          <h4>Contact</h4>
-          <a href="tel:+33987586865">09 87 58 68 65</a>
-          <a href="mailto:contact@100pourcentpneus.fr">contact@100pourcentpneus.fr</a>
-          <span>60 Cours Carnot, Elbeuf 76500</span>
-        </div>
       </div>
+
       <div className="footer-bottom">
-        <span>© 2026 100% Pneus 100% Pare-brise. Tous droits réservés.</span>
-        <span>Ouvert lun–sam | 8 h – 19 h</span>
+        <div className="footer-bottom-inner container">
+          <span>© {new Date().getFullYear()} 100% Pneus · 100% Pare-Brise</span>
+          <Link to="/contact">Mentions légales</Link>
+        </div>
       </div>
     </footer>
   )

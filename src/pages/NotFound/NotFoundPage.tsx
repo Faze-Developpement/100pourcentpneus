@@ -3,15 +3,12 @@ import "./NotFound.css"
 
 export default function NotFoundPage() {
   return (
-    <main className="notfound">
-      <div className="container notfound-card">
-        <p className="eyebrow">404</p>
-        <h1 className="section-title">Page introuvable</h1>
-        <p className="section-lead">
-          La page demandée n'existe pas ou a été déplacée.
-        </p>
-        <Link to="/" className="btn btn-primary">Retour accueil</Link>
+    <div className="notfound">
+      <div className="container">
+        <span className="notfound-code">404</span>
+        <h1 className="notfound-title">Page introuvable</h1>
+        <Link to="/" className="btn btn-outline">Retour à l'accueil</Link>
       </div>
-    </main>
+    </div>
   )
 }

@@ -7,10 +7,10 @@
   --line-soft: rgba(255, 255, 255, 0.05);
   --text: #EDE9E2;
   --muted: #7A7770;
-  --accent: #C8251A;
-  --accent-hover: #DC3020;
-  --accent-soft: rgba(200, 37, 26, 0.12);
-  --accent-glow: rgba(200, 37, 26, 0.28);
+  --accent: #E8640A;
+  --accent-hover: #FF7010;
+  --accent-soft: rgba(232, 100, 10, 0.12);
+  --accent-glow: rgba(232, 100, 10, 0.32);
   --font-display: "Chakra Petch", monospace;
   --font-body: "Karla", sans-serif;
   --header-height: 72px;
