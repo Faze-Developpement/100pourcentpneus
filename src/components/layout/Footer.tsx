@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="footer-contact">
           <span className="footer-col-title">Contact</span>
           <a href="tel:+33XXXXXXXXX">02 XX XX XX XX</a>
-          <address>XX rue XXXX<br />XXXXX Caen</address>
+          <address>60 rue Cours Carnot<br />76500 Elbeuf</address>
           <div className="footer-hours">
             <span>Lun–Ven · 8h–18h</span>
             <span>Sam · 9h–17h</span>

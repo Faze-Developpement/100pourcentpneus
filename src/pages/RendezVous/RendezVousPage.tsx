@@ -82,7 +82,7 @@ export default function RendezVousPage() {
                 </div>
                 <div className="rdv-info-block">
                   <span className="rdv-info-label">Adresse</span>
-                  <address className="rdv-info-val">XX rue XXXX<br />XXXXX Caen</address>
+                  <address className="rdv-info-val">60 rue Cours Carnot<br />76500 Elbeuf</address>
                 </div>
                 <div className="rdv-info-block">
                   <span className="rdv-info-label">Horaires</span>
